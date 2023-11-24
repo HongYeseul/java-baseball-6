@@ -6,10 +6,12 @@ import java.util.List;
 import static baseball.model.user.Validator.checkUniqueNumbers;
 
 public class User {
-    TryNumber tryNumber;
+    TryNumber tryNumber = new TryNumber();
 
     public void inputGameNumber(String inputNumber) {
-        checkUniqueNumbers(makeNumbersFromString(inputNumber));
+        List<Integer> fromInputNumbers = makeNumbersFromString(inputNumber);
+        checkUniqueNumbers(fromInputNumbers);
+        tryNumber.makeNumber(fromInputNumbers);
     }
 
     private List<Integer> makeNumbersFromString(String inputNumber) {
