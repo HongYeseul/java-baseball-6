@@ -1,9 +1,11 @@
 package baseball.model.master;
 
+import static baseball.model.constants.GameRule.START_GAME;
+
 public class GameFlag {
     private boolean flag;
     public GameFlag() {
-        flag = true;
+        flag = START_GAME;
     }
 
     public void setFlag(boolean flag) {

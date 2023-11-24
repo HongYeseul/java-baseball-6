@@ -7,4 +7,6 @@ public class GameRule {
     public static Integer MAXIMUM_NUMBER_RANGE = 9;
 
     public static Integer WANT_RESTART = 1;
+
+    public static boolean START_GAME = true;
 }
