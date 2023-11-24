@@ -26,4 +26,8 @@ public class Master {
         }
         return Result.makeResultToString(strike, ball);
     }
+
+    public boolean isGameRestart(int flag) {
+        return flag == 1;
+    }
 }
