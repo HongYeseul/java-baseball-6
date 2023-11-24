@@ -1,19 +1,14 @@
 package baseball.model.master;
 
 import baseball.model.computer.Answer;
-import baseball.model.computer.Random;
-import baseball.model.user.TryNumber;
 import baseball.model.user.User;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MasterTest {
 
