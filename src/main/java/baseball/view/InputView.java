@@ -2,6 +2,8 @@ package baseball.view;
 
 import camp.nextstep.edu.missionutils.Console;
 
+import static baseball.view.Validator.checkNumericOfRestart;
+
 public class InputView {
     public static String readLine(){
         return Console.readLine();
@@ -16,6 +18,8 @@ public class InputView {
     }
 
     public Integer askRestart() {
-        return Integer.parseInt(readLine());
+        String aboutRestart = readLine();
+        checkNumericOfRestart(aboutRestart);
+        return Integer.parseInt(aboutRestart);
     }
 }
