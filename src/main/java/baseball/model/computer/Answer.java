@@ -4,6 +4,8 @@ import baseball.model.user.TryNumber;
 
 import java.util.List;
 
+import static baseball.model.constants.GameRule.NUMBER_COUNT;
+
 public class Answer {
     List<Integer> answer;
 
@@ -21,7 +23,7 @@ public class Answer {
 
     public int getBallByIndex(TryNumber userNumber, int index) {
         int ball = 0;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUMBER_COUNT; i++) {
             if (index == i) {
                 continue;
             }

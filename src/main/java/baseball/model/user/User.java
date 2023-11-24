@@ -3,6 +3,7 @@ package baseball.model.user;
 import java.util.ArrayList;
 import java.util.List;
 
+import static baseball.model.constants.GameRule.NUMBER_COUNT;
 import static baseball.model.user.Validator.checkUniqueNumbers;
 
 public class User {
@@ -21,9 +22,9 @@ public class User {
 
     private List<Integer> makeNumbersFromString(String inputNumber) {
         List<Integer> numbers = new ArrayList<>();
-        numbers.add(Integer.parseInt(String.valueOf(inputNumber.charAt(0))));
-        numbers.add(Integer.parseInt(String.valueOf(inputNumber.charAt(1))));
-        numbers.add(Integer.parseInt(String.valueOf(inputNumber.charAt(2))));
+        for (int index = 0; index < NUMBER_COUNT; index++) {
+            numbers.add(Integer.parseInt(String.valueOf(inputNumber.charAt(index))));
+        }
         return numbers;
     }
 }
