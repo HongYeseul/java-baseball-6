@@ -1,6 +1,8 @@
 package baseball.model.master;
 
 import static baseball.model.constants.GameRule.NUMBER_COUNT;
+import static baseball.model.constants.ResultFormat.FORMAT_INT_STRING;
+import static baseball.model.constants.ResultFormat.FORMAT_INT_STRING_WITH_BLANK;
 
 public enum Result {
     BALL("볼"),
@@ -15,16 +17,16 @@ public enum Result {
 
     public static String makeResultToString(int strike, int ball) {
         if (strike == NUMBER_COUNT) {
-            return "3"+STRIKE.name;
+            return String.format(FORMAT_INT_STRING, NUMBER_COUNT, STRIKE.name);
         }
         if (strike > 0 && ball > 0) {
-            return strike + STRIKE.name + ball + BALL.name;
+            return String.format(FORMAT_INT_STRING_WITH_BLANK, ball, BALL.name, strike, STRIKE.name);
         }
         if (strike == 0 && ball > 0) {
-            return ball + BALL.name;
+            return String.format(FORMAT_INT_STRING, ball, BALL.name);
         }
         if (strike > 0 && ball == 0) {
-            return strike + STRIKE.name;
+            return String.format(FORMAT_INT_STRING, strike, STRIKE.name);
         }
         return NOTHING.name;
     }
