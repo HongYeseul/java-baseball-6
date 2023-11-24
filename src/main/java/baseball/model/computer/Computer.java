@@ -7,4 +7,7 @@ public class Computer {
         answer = Random.makeAnswer();
     }
 
+    public Answer getAnswer() {
+        return answer;
+    }
 }

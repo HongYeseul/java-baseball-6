@@ -8,6 +8,10 @@ import static baseball.model.user.Validator.checkUniqueNumbers;
 public class User {
     TryNumber tryNumber = new TryNumber();
 
+    public TryNumber getTryNumber() {
+        return tryNumber;
+    }
+
     public TryNumber inputGameNumber(String inputNumber) {
         List<Integer> fromInputNumbers = makeNumbersFromString(inputNumber);
         checkUniqueNumbers(fromInputNumbers);

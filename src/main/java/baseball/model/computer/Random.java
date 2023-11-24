@@ -14,6 +14,7 @@ public class Random {
                 randomNumbers.add(randomNumber);
             }
         }
+        System.out.println(randomNumbers);
         return new Answer(randomNumbers);
     }
 }
