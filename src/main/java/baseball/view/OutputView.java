@@ -1,12 +1,16 @@
 package baseball.view;
 
+import static baseball.view.constants.OutputMessage.ASK_USER_NUMBERS_MESSAGE;
+import static baseball.view.constants.OutputMessage.END_GAME_AND_ASK_RESTART_MESSAGE;
+import static baseball.view.constants.OutputMessage.START_MESSAGE;
+
 public class OutputView {
     public void startGame() {
-        println("숫자 야구 게임을 시작합니다.");
+        println(START_MESSAGE);
     }
 
     public void askNumbers() {
-        print("숫자를 입력해주세요 : ");
+        print(ASK_USER_NUMBERS_MESSAGE);
     }
 
     public void printResult(String result) {
@@ -21,13 +25,7 @@ public class OutputView {
         System.out.println(message);
     }
 
-    private void nextLine(){
-        System.out.print(System.lineSeparator());
-    }
-
     public void endGameAndAskRestart() {
-        println("""
-                3개의 숫자를 모두 맞히셨습니다! 게임 종료
-                게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.""");
+        println(END_GAME_AND_ASK_RESTART_MESSAGE);
     }
 }
