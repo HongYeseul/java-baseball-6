@@ -1,6 +1,7 @@
 package baseball.model.computer;
 
-import java.util.ArrayList;
+import baseball.model.user.TryNumber;
+
 import java.util.List;
 
 public class Answer {
@@ -8,5 +9,26 @@ public class Answer {
 
     public Answer(List<Integer> randomNumbers) {
         answer = randomNumbers;
+    }
+
+    public boolean isStrike(TryNumber userNumber) {
+        return answer.equals(userNumber.getNumbers());
+    }
+
+    public boolean isStrikeByIndex(TryNumber userNumber, int index) {
+        return answer.get(index).equals(userNumber.getNumberByIndex(index));
+    }
+
+    public int getBallByIndex(TryNumber userNumber, int index) {
+        int ball = 0;
+        for (int i = 0; i < 3; i++) {
+            if (index == i) {
+                continue;
+            }
+            if (answer.get(index) == userNumber.getNumberByIndex(i)) {
+                ball++;
+            }
+        }
+        return ball;
     }
 }
