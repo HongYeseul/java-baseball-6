@@ -3,6 +3,7 @@ package baseball.view;
 import camp.nextstep.edu.missionutils.Console;
 
 import static baseball.view.Validator.checkNumericOfRestart;
+import static baseball.view.Validator.checkNumericOfUserNumber;
 
 public class InputView {
     public static String readLine(){
@@ -14,7 +15,9 @@ public class InputView {
     }
 
     public String inputNumbers() {
-        return readLine();
+        String userNumbers = readLine();
+        checkNumericOfUserNumber(userNumbers);
+        return userNumbers;
     }
 
     public Integer askRestart() {
